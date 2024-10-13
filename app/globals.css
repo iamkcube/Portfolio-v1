@@ -2,26 +2,57 @@
 @tailwind components;
 @tailwind utilities;
 
-:root {
-  --background: #ffffff;
-  --foreground: #171717;
+@import url(reset.css);
+
+:root
+{
+	--bg-color: 212, 15%, 90%;
+	--text-color: 0, 0%, 8%;
+	--accent-color: #ffa800;
+	--button-transition-time: 1000ms;
+	--button-transition-function: cubic-bezier(0.11, 0.14, 0.29, 1.32);
 }
 
-@media (prefers-color-scheme: dark) {
-  :root {
-    --background: #0a0a0a;
-    --foreground: #ededed;
-  }
+/* @media (prefers-color-scheme:dark)
+{
+	:root
+	{
+		--bg-color: 240, 100%, 3%;
+		--text-color: 212, 15%, 90%;
+	}
+} */
+
+.light
+{
+
+	--bg-color: 212, 15%, 90%;
+	--text-color: 0, 0%, 8%;
 }
 
-body {
-  color: var(--foreground);
-  background: var(--background);
-  font-family: Arial, Helvetica, sans-serif;
+.dark
+{
+	--bg-color: 240, 100%, 3%;
+	--text-color: 212, 15%, 90%;
 }
 
-@layer utilities {
-  .text-balance {
-    text-wrap: balance;
-  }
+body
+{
+	background-color: hsl(var(--bg-color));
+	background-image: linear-gradient(to left, hsla(var(--bg-color), 0) 10%, hsla(var(--bg-color), 1)), url("../assets/images/noise.png");
+	/* filter: url("#noiseFilter"); */
+	color: hsl(var(--text-color));
+	transition: background-color var(--button-transition-time) var(--button-transition-function), 
+				color var(--button-transition-time) var(--button-transition-function);
+	overflow-x: hidden;
+}
+
+svg>rect
+{
+	fill: hsl(var(--text-color));
+	transition: fill var(--button-transition-time) var(--button-transition-function);
+}
+
+strong
+{
+	color: var(--accent-color);
 }
