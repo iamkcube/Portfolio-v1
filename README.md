@@ -1,36 +1,112 @@
-This is a [Next.js](https://nextjs.org) project bootstrapped with [`create-next-app`](https://nextjs.org/docs/app/api-reference/cli/create-next-app).
+# Portfolio Website
 
-## Getting Started
+This repository contains the code for my personal portfolio website, showcasing my skills, projects, and achievements as a developer and designer. The site is built using **Next.js** with the **app directory** structure, ensuring a modular and scalable codebase.
 
-First, run the development server:
+## 🚀 Live Demo
+
+Explore the live version of my portfolio [here](https://iamkcube.vercel.app).
+
+## 🛠️ Tech Stack
+
+-   **Framework**: [Next.js](https://nextjs.org/)
+-   **Styling**: [Tailwind CSS](https://tailwindcss.com/)
+-   **Design Tools**: [Figma](https://www.figma.com/)
+-   **Deployment**: [Vercel](https://vercel.com/)
+-   **Additional Libraries**: React Icons, Framer Motion (for animations), custom SVGs
+
+## 📁 Project Structure
 
 ```bash
-npm run dev
-# or
-yarn dev
-# or
-pnpm dev
-# or
-bun dev
+portfolio-v1
+├── .next               # Next.js build output
+├── app                 # Main app directory
+│   ├── favicon.ico     # Site favicon
+│   ├── fonts           # Custom fonts
+│   ├── globals.css     # Global CSS styles
+│   ├── layout.tsx      # Main layout component
+│   ├── page.tsx        # Root page of the website
+│   ├── reset.css       # CSS reset file
+│   └── assets          # Static assets like images
+├── components          # Reusable UI components
+│   ├── AboutSection.tsx
+│   ├── ArrowSVG.tsx
+│   ├── Background.tsx
+│   ├── ContactForm.tsx
+│   ├── MetaballsCanvas.tsx
+│   ├── Navbar.tsx
+│   ├── ProjectCard.tsx
+│   ├── SocialMediaHandles.tsx
+│   └── ThemeSwitcher.tsx
+├── node_modules        # Node.js modules
+├── utils               # Utility functions
+├── .eslintrc.json      # ESLint configuration
+├── .gitignore          # Git ignore file
 ```
 
-Open [http://localhost:3000](http://localhost:3000) with your browser to see the result.
+## 🎨 Features
 
-You can start editing the page by modifying `app/page.tsx`. The page auto-updates as you edit the file.
+-   **Modular Structure**: Uses Next.js app directory for cleaner, more maintainable code.
+-   **Responsive Design**: Adaptable UI for both desktop and mobile devices.
+-   **Dynamic Animations**: Smooth transitions and interactive UI elements using Framer Motion.
+-   **Dark/Light Mode**: Toggle between themes for a personalized experience.
+-   **Contact Form**: Visitors can reach out through an integrated contact form.
+-   **SEO Friendly**: Optimized for better search engine visibility.
 
-This project uses [`next/font`](https://nextjs.org/docs/app/building-your-application/optimizing/fonts) to automatically optimize and load [Geist](https://vercel.com/font), a new font family for Vercel.
+## 🖥️ Getting Started
 
-## Learn More
+### Prerequisites
 
-To learn more about Next.js, take a look at the following resources:
+Ensure you have the following installed:
 
-- [Next.js Documentation](https://nextjs.org/docs) - learn about Next.js features and API.
-- [Learn Next.js](https://nextjs.org/learn) - an interactive Next.js tutorial.
+-   [Node.js](https://nodejs.org/en/download/)
+-   [npm](https://www.npmjs.com/) or [pnpm](https://pnpm.io/)
 
-You can check out [the Next.js GitHub repository](https://github.com/vercel/next.js) - your feedback and contributions are welcome!
+### Installation
 
-## Deploy on Vercel
+1. **Clone the repository**:
 
-The easiest way to deploy your Next.js app is to use the [Vercel Platform](https://vercel.com/new?utm_medium=default-template&filter=next.js&utm_source=create-next-app&utm_campaign=create-next-app-readme) from the creators of Next.js.
+    ```bash
+    git clone https://github.com/iamkcube/Portfolio-v1
+    cd portfolio-v1
+    ```
 
-Check out our [Next.js deployment documentation](https://nextjs.org/docs/app/building-your-application/deploying) for more details.
+2. **Install dependencies**:
+
+    ```bash
+    npm install
+    # or
+    pnpm install
+    ```
+
+3. **Run the development server**:
+
+    ```bash
+    npm run dev
+    # or
+    pnpm dev
+    ```
+
+4. Open your browser and go to `http://localhost:3000` to see my portfolio.
+
+## 🛡️ Deployment
+
+Deploy my portfolio on [Vercel](https://vercel.com/):
+
+1. Link your GitHub repository to Vercel.
+2. Deploy with a single click and enjoy continuous deployment on every commit.
+
+## 📚 Future Enhancements
+
+-   **Blog Integration**: Adding a blog to share articles and tutorials.
+-   **Advanced Animations**: Adding more complex visual effects.
+-   **Performance Optimization**: Further improving the site's load times.
+
+## 📝 License
+
+This project is open-source and available under the [MIT License](LICENSE).
+
+## 👋 Connect with Me
+
+-   [LinkedIn](https://www.linkedin.com/in/kalingakhatua)
+-   [GitHub](https://github.com/iamkcube)
+-   [Twitter](https://x.com/iamkcube_)
