@@ -1,11 +1,24 @@
 "use client";
 
-import { FormEvent, useState } from "react";
+import { FormEvent, useEffect, useState } from "react";
 
 export default function ContactForm() {
 	const [isLoading, setIsLoading] = useState<boolean>(false);
 	const [isSuccess, setIsSuccess] = useState<boolean>(false);
 	const [error, setError] = useState<string | null>(null);
+	const [buttonText, setButtonText] = useState("Get in Touch");
+
+	useEffect(() => {
+		if (isSuccess) {
+			setButtonText("Thank You");
+			const timer = setTimeout(() => {
+				setButtonText("Get in Touch");
+			}, 2000);
+
+			// Cleanup function to clear the timer if the component unmounts
+			return () => clearTimeout(timer);
+		}
+	}, [isSuccess]);
 
 	async function onSubmit(event: FormEvent<HTMLFormElement>) {
 		event.preventDefault();
@@ -38,9 +51,13 @@ export default function ContactForm() {
 			if (result.success) {
 				setIsSuccess(true);
 			}
-		} catch (error: any) {
-			setError(error.message);
-			console.error(error);
+		} catch (error) {
+			if (error instanceof Error) {
+				setError(error.message);
+				console.error(error);
+			} else {
+				throw error;
+			}
 		} finally {
 			setIsLoading(false);
 		}
@@ -85,7 +102,7 @@ export default function ContactForm() {
 				type="submit"
 				disabled={isLoading}
 			>
-				{isLoading ? "Loading..." : error ? "Retry" : "Get in Touch"}
+				{isLoading ? "Loading..." : error ? "Retry" : buttonText}
 			</button>
 		</form>
 	);

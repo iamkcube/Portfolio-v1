@@ -1,14 +1,14 @@
-"use client"
+"use client";
 
 import { useEffect, useRef } from "react";
 
-interface Vector2D {
-	x: number;
-	y: number;
-	magnitude: number;
-	computed: number;
-	force: number;
-}
+// interface Vector2D {
+// 	x: number;
+// 	y: number;
+// 	magnitude: number;
+// 	computed: number;
+// 	force: number;
+// }
 
 class Vector2D {
 	x: number;
@@ -136,8 +136,8 @@ class Metaballs {
 	}
 
 	computeForce(x: number, y: number, index?: number): number {
-		let force,
-			gridIndex = index ?? x + y * (this.sx + 2);
+		let force;
+		const gridIndex = index ?? x + y * (this.sx + 2);
 
 		if (x === 0 || y === 0 || x === this.sx || y === this.sy) {
 			force = 0.6 * this.sign;
@@ -324,7 +324,14 @@ export default function MetaballsCanvas({
 		const width = (canvas.width = window.innerWidth);
 		const height = (canvas.height = window.innerHeight);
 
-		const metaballs = new Metaballs(width, height, noOfBalls, color1, color2, ctx);
+		const metaballs = new Metaballs(
+			width,
+			height,
+			noOfBalls,
+			color1,
+			color2,
+			ctx
+		);
 
 		const animate = () => {
 			ctx.clearRect(0, 0, width, height);
@@ -333,7 +340,7 @@ export default function MetaballsCanvas({
 		};
 
 		animate();
-	}, []);
+	}, [color1, color2, noOfBalls]);
 
 	return <canvas ref={canvasRef} />;
 }
