@@ -12,7 +12,7 @@ Explore the live version of my portfolio [here](https://iamkcube.vercel.app).
 -   **Styling**: [Tailwind CSS](https://tailwindcss.com/)
 -   **Design Tools**: [Figma](https://www.figma.com/)
 -   **Deployment**: [Vercel](https://vercel.com/)
--   **Additional Libraries**: React Icons, Framer Motion (for animations), custom SVGs
+-   **Additional Libraries**: React Icons, custom SVGs
 
 ## 📁 Project Structure
 

@@ -1,3 +1,5 @@
+"use client";
+
 import { projects } from "@/assets/ts/projects";
 import AboutSection from "@/components/AboutSection";
 import ArrowSVG from "@/components/ArrowSVG";
@@ -26,9 +28,15 @@ export default function Home() {
 					<span className="text-accent ">Development.</span>
 					<span>Knowledge.</span>
 				</div>
-				<button className="px-4 py-3 bg-[hsl(var(--bg-color))] text-[hsl(var(--text-color))] rounded-lg shadow-2xl shadow-gray-800">
+				{/* <button className="px-4 py-3 bg-[hsl(var(--bg-color))] text-[hsl(var(--text-color))] rounded-lg shadow-2xl shadow-gray-800 z-100 hover:scale-95 "> */}
+				<a
+					href="/Resume - Kalinga Kumar Khatua - Software Developer.pdf"
+					download="Resume - Kalinga Kumar Khatua - Software Developer.pdf"
+					className="px-8 py-4 bg-[hsl(var(--bg-color))] text-[hsl(var(--text-color))] rounded-lg shadow-2xl shadow-gray-800 transition-transform hover:scale-95"
+				>
 					Download My Resume
-				</button>
+				</a>
+				{/* </button> */}
 			</main>
 			<div className="grid">
 				<p className="text-lg ml-auto text-right font-bold w-[15ch] mt-3">

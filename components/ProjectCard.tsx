@@ -49,6 +49,7 @@ export default function ProjectCard({
 			ref={sectionRef}
 			className="group project-card"
 			sx={{
+				position: "relative",
 				color: "hsl(var(--text-color-dark))",
 				borderRadius: "0.75rem",
 				transition:
@@ -114,8 +115,7 @@ export default function ProjectCard({
 					minHeight: "100%",
 				}}
 			>
-				<div
-					className="aspect-video mb-4 rounded-lg"></div>
+				<div className="aspect-video mb-4 rounded-lg"></div>
 				{/* <img
 					className="aspect-video mb-4 rounded-lg"
 					src={""}
