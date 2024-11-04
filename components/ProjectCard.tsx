@@ -1,6 +1,6 @@
 "use client";
 
-import { Box } from "@mui/material";
+import { Box, Typography } from "@mui/material";
 
 import { useEffect, useRef, useState } from "react";
 
@@ -49,36 +49,15 @@ export default function ProjectCard({
 			ref={sectionRef}
 			className="group project-card"
 			sx={{
-				display: "grid",
-				padding: "1.5rem",
-				backgroundColor: "transparent",
-				backgroundImage: `linear-gradient(to top,hsl(var(--bg-color)), transparent), url(${secondaryImgUrl})`,
+				color: "hsl(var(--text-color-dark))",
 				borderRadius: "0.75rem",
 				transition:
-					"transform 500ms ease-in-out, color 500ms ease-in-out, background-color 500ms ease-in-out, opacity 500ms ease-in-out, backdrop-filter 500ms ease-in-out",
-				cursor: "pointer",
-				zIndex: 0,
-				isolation: "isolate",
+					"transform 750ms ease, color 750ms ease, background-color 750ms ease, opacity 750ms ease, backdrop-filter 750ms ease",
 
-				"&::before": {
-					content: `'${description}'`,
-					position: "absolute",
-					inset: 0,
-					padding: "2rem",
-					backgroundColor: "hsla(var(--bg-color),0.15)",
-					color: "transparent",
-					borderRadius: "0.75rem",
-					zIndex: 10,
-					transformOrigin: "bottom",
-					cursor: "pointer",
-					transition:
-						"transform 500ms ease-in-out, color 500ms ease-in-out, background-color 500ms ease-in-out, opacity 500ms ease-in-out, backdrop-filter 500ms ease-in-out",
-					WebkitBackdropFilter: "blur(0)",
-					backdropFilter: "blur(0)",
-				},
-				"&:hover::before": {
-					color: "hsl(var(--text-color))",
-					transform: "translate(-1rem) rotate(12deg)",
+				"&:hover .before": {
+					color: "hsl(var(--text-color-dark))",
+					opacity: 1,
+					transform: "translate(1rem) rotate(12deg)",
 					zIndex: 10,
 					transformOrigin: "bottom",
 					cursor: "pointer",
@@ -88,7 +67,76 @@ export default function ProjectCard({
 						"blur(4px) brightness(.5) grayscale(20%) saturate(1.5)",
 				},
 
-				"&::after": {
+				"&:hover .after": {
+					zIndex: -10,
+					transform: "translate(-1rem) rotate(-12deg)",
+					backgroundColor: "hsla(0,0%,100%,0.15)",
+					opacity: 1,
+				},
+
+				"&:hover h3": {
+					transform: "translateY(calc( 0.5rem + 5rem  + 9rem))",
+				},
+			}}
+		>
+			<Box
+				className="before"
+				sx={{
+					position: "absolute",
+					inset: 0,
+					padding: "2rem",
+					backgroundColor: "hsla(var(--bg-color),0.15)",
+					color: "transparent",
+					borderRadius: "0.75rem",
+					zIndex: 10,
+					transformOrigin: "bottom",
+					cursor: "pointer",
+					opacity: 0,
+					transition:
+						"transform 750ms cubic-bezier(0.68, -0.55, 0.27, 1.55), color 750ms ease-in, background-color 750ms ease-in, opacity 750ms ease-in, backdrop-filter 750ms ease-in",
+					WebkitBackdropFilter: "blur(0)",
+					backdropFilter: "blur(0)",
+				}}
+			>
+				<p>{description}</p>
+			</Box>
+			<Box
+				sx={{
+					display: "grid",
+					padding: "1.5rem",
+					backgroundColor: "transparent",
+					backgroundImage: `linear-gradient(to top,hsl(var(--bg-color-dark)) 20%, transparent), url(${secondaryImgUrl})`,
+					borderRadius: "0.75rem",
+					transition:
+						"transform 750ms cubic-bezier(0.68, -0.55, 0.27, 1.55), color 750ms cubic-bezier(0.68, -0.55, 0.27, 1.55), background-color 750ms cubic-bezier(0.68, -0.55, 0.27, 1.55), opacity 750ms cubic-bezier(0.68, -0.55, 0.27, 1.55), backdrop-filter 750ms cubic-bezier(0.68, -0.55, 0.27, 1.55)",
+					cursor: "pointer",
+					zIndex: 0,
+					minHeight: "100%",
+				}}
+			>
+				<div
+					className="aspect-video mb-4 rounded-lg"></div>
+				{/* <img
+					className="aspect-video mb-4 rounded-lg"
+					src={""}
+					alt=""
+				/> */}
+				<h3
+					className={`text-[1.75rem] font-bold text-accent mb-2 transition-transform ease-out`}
+				>
+					{title}
+				</h3>
+				<p
+					className="mb-4 scale-y-100 origin-bottom transition-[transform,opacity]
+				line-clamp-3 duration-500
+				group-hover:opacity-0"
+				>
+					{description}
+				</p>
+			</Box>
+			<Box
+				className="after"
+				sx={{
 					content: "''",
 					backgroundImage: `url(${primaryImgUrl})`,
 					position: "absolute",
@@ -98,38 +146,11 @@ export default function ProjectCard({
 					zIndex: -10,
 					transformOrigin: "bottom",
 					cursor: "pointer",
+					opacity: 0,
 					transition:
-						"transform 500ms ease-in-out, color 500ms ease-in-out, background-color 500ms ease-in-out, opacity 500ms ease-in-out, backdrop-filter 500ms ease-in-out",
-				},
-
-				"&:hover::after": {
-					zIndex: -10,
-					transform: "translate(-1rem) rotate(-12deg)",
-					backgroundColor: "hsla(0,0%,100%,0.15)",
-				},
-
-				"&:hover>h3": {
-					transform: "translateY(calc( 0.5rem + 5rem ))",
-				},
-			}}
-		>
-			<img
-				className="aspect-video mb-4 rounded-lg"
-				src={""}
-				alt=""
-			/>
-			<h3
-				className={`text-[1.75rem] font-bold text-accent mb-2 transition-transform ease-in-out`}
-			>
-				{title}
-			</h3>
-			<p
-				className="mb-4 scale-y-100 origin-bottom transition-transform 
-			line-clamp-3
-			group-hover:scale-y-0"
-			>
-				{description}
-			</p>
+						"transform 750ms cubic-bezier(0.68, -0.55, 0.27, 1.55), color 750ms cubic-bezier(0.68, -0.55, 0.27, 1.55), background-color 750ms cubic-bezier(0.68, -0.55, 0.27, 1.55), opacity 750ms cubic-bezier(0.68, -0.55, 0.27, 1.55), backdrop-filter 750ms cubic-bezier(0.68, -0.55, 0.27, 1.55)",
+				}}
+			></Box>
 		</Box>
 	);
 }

@@ -7,7 +7,9 @@
 :root
 {
 	--bg-color: 212, 15%, 90%;
+	--bg-color-dark: 240, 100%, 3%;
 	--text-color: 0, 0%, 8%;
+	--text-color-dark: 212, 15%, 90%;
 	--accent-color: #ffa800;
 	--button-transition-time: 1000ms;
 	--button-transition-function: cubic-bezier(0.11, 0.14, 0.29, 1.32);
@@ -24,7 +26,6 @@
 
 .light
 {
-
 	--bg-color: 212, 15%, 90%;
 	--text-color: 0, 0%, 8%;
 }

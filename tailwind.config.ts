@@ -16,11 +16,20 @@ const config: Config = {
 			fontFamily: {
 				voyager: ["var(--font-voyager)", "sans-serif"],
 			},
+			animation: {
+				"line-anim": "line-anim 5s ease 3s infinite",
+			},
+			keyframes: {
+				"line-anim": {
+					"80%": { "stroke-dashoffset": "0", fill: "transparent" },
+					"100%": { "stroke-dashoffset": "0", fill: "currentColor" },
+				},
+			},
 		},
 		backgroundImage: {
-			'noisy-bg': "url('./../assets/images/noisy.png')",
-			'noise-bg': "url('./../assets/images/noise.png')",
-		  },
+			"noisy-bg": "url('./../assets/images/noisy.png')",
+			"noise-bg": "url('./../assets/images/noise.png')",
+		},
 	},
 	plugins: [],
 };
