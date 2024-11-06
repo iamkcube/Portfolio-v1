@@ -43,7 +43,7 @@ export default function Cursor() {
 	const circle = { x: 0, y: 0 };
 	const currentScale = useRef(0);
 	const currentAngle = useRef(0);
-	const speed = 0.07;
+	const speed = 0.15;
 
 	useEffect(() => {
 		const tick = () => {
