@@ -31,7 +31,7 @@ const ThemeSwitcher = () => {
 	return (
 		<button
 			id="theme-switcher"
-			aria-labelledby="Theme Switcher"
+			aria-label="Theme Switch"
 			className="cursor-pointer bg-transparent border-0 opacity-80 w-8 h-8 rounded-full relative isolation-isolate hover:opacity-100 focus-visible:opacity-100"
 			onClick={toggleTheme}
 		>
