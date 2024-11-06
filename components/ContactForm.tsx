@@ -94,10 +94,11 @@ export default function ContactForm() {
 				rows={5}
 			/>
 			<button
-				className="px-7 py-3 col-span-2 bg-orange-700 justify-self-center rounded-md transition-[transform,color] duration-500 ease-in-out
-					hover:bg-orange-600 hover:scale-95"
+				className="px-7 py-3 col-span-2 justify-self-center rounded-md 
+				transition-[transform,background-color,color] duration-500 ease-in-out
+					hover:!bg-orange-600 hover:text-[hsl(var(--bg-color))] hover:scale-95"
 				style={{
-					backgroundColor: error ? "red" : "rgb(194 65 12)",
+					backgroundColor: error ? "red" : "rgb(154 52 18)",
 				}}
 				type="submit"
 				disabled={isLoading}

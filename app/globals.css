@@ -42,8 +42,8 @@ body
 	background-image: linear-gradient(to left, hsla(var(--bg-color), 0) 10%, hsla(var(--bg-color), 1)), url("../assets/images/noise.png");
 	/* filter: url("#noiseFilter"); */
 	color: hsl(var(--text-color));
-	transition: background-color var(--button-transition-time) var(--button-transition-function), 
-				color var(--button-transition-time) var(--button-transition-function);
+	transition: background-color var(--button-transition-time) var(--button-transition-function),
+		color var(--button-transition-time) var(--button-transition-function);
 	overflow-x: hidden;
 }
 

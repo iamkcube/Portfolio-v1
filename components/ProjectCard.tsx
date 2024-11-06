@@ -59,7 +59,6 @@ export default function ProjectCard({
 					color: "hsl(var(--text-color-dark))",
 					opacity: 1,
 					transform: "translate(1rem) rotate(12deg)",
-					zIndex: 10,
 					transformOrigin: "bottom",
 					cursor: "pointer",
 					WebkitBackdropFilter:

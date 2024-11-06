@@ -5,6 +5,8 @@ import AboutSection from "@/components/AboutSection";
 import ArrowSVG from "@/components/ArrowSVG";
 import Background from "@/components/Background";
 import ContactForm from "@/components/ContactForm";
+import Cursor from "@/components/Cursor";
+import MainSection from "@/components/MainSection";
 import Navbar from "@/components/Navbar";
 import ProjectCard from "@/components/ProjectCard";
 import SocialMediaHandles from "@/components/SocialMediaHandles";
@@ -13,6 +15,7 @@ import React from "react";
 export default function Home() {
 	return (
 		<div className="grid grid-rows-[auto_calc(100vh_-_12rem)_repeat(3,auto)] grid-cols-[1fr_4fr] gap-y-24 gap-x-16 min-h-screen mx-16 mt-8 font-voyager">
+			<Cursor />
 			<Background />
 			<Navbar />
 			<div className="grid justify-end">
@@ -22,22 +25,7 @@ export default function Home() {
 				</p>
 				<ArrowSVG />
 			</div>
-			<main className="flex flex-col gap-8 items-center sm:items-start">
-				<div className="grid font-bold text-8xl gap-2 drop-shadow-xl">
-					<span>Design.</span>
-					<span className="text-accent ">Development.</span>
-					<span>Knowledge.</span>
-				</div>
-				{/* <button className="px-4 py-3 bg-[hsl(var(--bg-color))] text-[hsl(var(--text-color))] rounded-lg shadow-2xl shadow-gray-800 z-100 hover:scale-95 "> */}
-				<a
-					href="/Resume - Kalinga Kumar Khatua - Software Developer.pdf"
-					download="Resume - Kalinga Kumar Khatua - Software Developer.pdf"
-					className="px-8 py-4 bg-[hsl(var(--bg-color))] text-[hsl(var(--text-color))] rounded-lg shadow-2xl shadow-gray-800 transition-transform hover:scale-95"
-				>
-					Download My Resume
-				</a>
-				{/* </button> */}
-			</main>
+			<MainSection />
 			<div className="grid">
 				<p className="text-lg ml-auto text-right font-bold w-[15ch] mt-3">
 					1 of 4

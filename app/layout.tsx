@@ -3,7 +3,6 @@ import localFont from "next/font/local";
 import "./globals.css";
 import { AppRouterCacheProvider } from "@mui/material-nextjs/v14-appRouter";
 
-
 const voyager = localFont({
 	src: [
 		{
@@ -47,7 +46,10 @@ export default function RootLayout({
 	children: React.ReactNode;
 }>) {
 	return (
-		<html lang="en">
+		<html
+			lang="en"
+			className="dark"
+		>
 			<body className={`${voyager.variable} antialiased`}>
 				<AppRouterCacheProvider>{children}</AppRouterCacheProvider>
 			</body>
