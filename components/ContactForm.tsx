@@ -34,9 +34,7 @@ export default function ContactForm() {
 			);
 
 			const object = Object.fromEntries(formData);
-			console.log("🚀 ~ onSubmit ~ object:", object);
 			const json = JSON.stringify(object);
-			console.log("🚀 ~ onSubmit ~ json:", json);
 
 			const response = await fetch("https://api.web3forms.com/submit", {
 				method: "POST",

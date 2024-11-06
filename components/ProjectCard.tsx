@@ -2,7 +2,7 @@
 
 import { Box } from "@mui/material";
 
-import { useEffect, useRef, useState } from "react";
+import { useRef } from "react";
 
 interface projectProps {
 	title: string;
@@ -18,31 +18,27 @@ export default function ProjectCard({
 	secondaryImgUrl,
 }: projectProps) {
 	const sectionRef = useRef<HTMLDivElement | null>(null);
-	const [sectionHeight, setSectionHeight] = useState<number>(0);
+	// const [sectionHeight, setSectionHeight] = useState<number>(0);
 
-	useEffect(() => {
-		// Function to update section height
-		const updateHeight = () => {
-			if (sectionRef.current) {
-				setSectionHeight(sectionRef.current.clientHeight);
-			}
-		};
+	// useEffect(() => {
+	// 	// Function to update section height
+	// 	const updateHeight = () => {
+	// 		if (sectionRef.current) {
+	// 			setSectionHeight(sectionRef.current.clientHeight);
+	// 		}
+	// 	};
 
-		// Set initial height
-		updateHeight();
+	// 	// Set initial height
+	// 	updateHeight();
 
-		// Add event listener for resize
-		window.addEventListener("resize", updateHeight);
+	// 	// Add event listener for resize
+	// 	window.addEventListener("resize", updateHeight);
 
-		// Cleanup on component unmount
-		return () => {
-			window.removeEventListener("resize", updateHeight);
-		};
-	}, []);
-
-	useEffect(() => {
-		console.log("🚀 ~ useEffect ~ sectionHeight:", sectionHeight);
-	}, [sectionHeight]);
+	// 	// Cleanup on component unmount
+	// 	return () => {
+	// 		window.removeEventListener("resize", updateHeight);
+	// 	};
+	// }, []);
 
 	return (
 		<Box
@@ -75,7 +71,7 @@ export default function ProjectCard({
 				},
 
 				"&:hover h3": {
-					transform: "translateY(calc( 0.5rem + 5rem  + 9rem))",
+					transform: "translateY(calc( 0.5rem + 5rem + 9rem))",
 				},
 			}}
 		>

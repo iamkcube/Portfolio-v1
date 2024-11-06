@@ -49,7 +49,7 @@ export default function Home() {
 			>
 				<h2 className="text-5xl font-bold mb-16">Projects</h2>
 				<div
-					className="grid grid-cols-[repeat(auto-fit,minmax(20rem,1fr))] gap-x-20 gap-y-32 
+					className="grid grid-cols-[repeat(auto-fit,minmax(18.5rem,1fr))] gap-x-12 gap-y-32 
 					
 
 				[&:has(.project-card:hover)_.project-card]:bg-gray-900 

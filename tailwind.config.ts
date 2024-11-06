@@ -27,8 +27,8 @@ const config: Config = {
 			},
 		},
 		backgroundImage: {
-			"noisy-bg": "url('./../assets/images/noisy.png')",
-			"noise-bg": "url('./../assets/images/noise.png')",
+			"noisy-bg": "url('./../assets/images/noisy.webp')",
+			"noise-bg": "url('./../assets/images/noise.webp')",
 		},
 	},
 	plugins: [],
