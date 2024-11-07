@@ -7,11 +7,12 @@ export default function SocialMediaHandles() {
 			<div className="flex mt-8">
 				<div
 					className="size-20"
-					role="botton"
+					role="button"
 				>
 					<a
 						href="https://www.linkedin.com/in/kalingakhatua"
 						target="_blank"
+						aria-label="Visit my LinkedIn"
 					>
 						<svg
 							className="group"
