@@ -22,7 +22,7 @@ const Circle = styled("div")({
 	"body:hover &": {
 		opacity: 1,
 	},
-	"body:has(:is(.main-text, .project-card, button, a):hover) &": {
+	"body:has(:is(.main-text, .project-card, button, a, input, textarea):hover) &": {
 		scale: 2,
 		// backdropFilter: "blur(4px)",
 		// mixBlendMode: "exclusion",
