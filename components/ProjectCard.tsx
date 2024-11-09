@@ -107,7 +107,7 @@ export default function ProjectCard({
 				<p>{description}</p>
 			</Box>
 			<Box
-				className="p-2 md:p-6"
+				className="px-4 md:p-6"
 				sx={{
 					display: "grid",
 					backgroundColor: "transparent",
@@ -128,7 +128,7 @@ export default function ProjectCard({
 					src={""}
 					alt=""
 				/> */}
-				<h3 className="text-lg md:text-[1.75rem] font-bold leading-none text-accent mb-2 transition-transform ease-out">
+				<h3 className="text-lg truncate md:text-[1.75rem] font-bold leading-none text-accent mb-2 transition-transform ease-out">
 					{title}
 				</h3>
 				<p
