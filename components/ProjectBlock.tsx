@@ -112,14 +112,14 @@ export default function ProjectBlock() {
 					</Box>
 				</div>
 				{/* Dots Navigation */}
-				<div className="flex justify-center gap-2 mt-8 md:hidden">
+				<div className="flex justify-center gap-2 md:hidden">
 					{projects.map((_, index) => (
 						<button
 							key={index}
 							onClick={() => {
 								setActiveIndex(index);
 							}}
-							className={`w-2 h-2 rounded-full transition-all duration-300 ${
+							className={`size-3 rounded-full transition-all duration-300 ${
 								index === activeIndex % projects.length
 									? "bg-white w-6"
 									: "bg-gray-500"

@@ -22,7 +22,7 @@ export default function MainSection() {
 			<a
 				href="/Resume - Kalinga Kumar Khatua - Software Developer.pdf"
 				download="Resume - Kalinga Kumar Khatua - Software Developer.pdf"
-				className="px-6 py-4 bg-[hsl(var(--bg-color))] text-[hsl(var(--text-color))] rounded-lg shadow-2xl shadow-gray-800 transition-transform hover:scale-95"
+				className="px-4 py-3 md:px-6 md:py-4 bg-[hsl(var(--bg-color))] text-[hsl(var(--text-color))] rounded-lg shadow-2xl shadow-gray-800 transition-transform hover:scale-95"
 			>
 				Download My Resume
 			</a>
