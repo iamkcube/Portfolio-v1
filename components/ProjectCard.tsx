@@ -1,7 +1,6 @@
 "use client";
 
 import { Box } from "@mui/material";
-
 import { useRef } from "react";
 
 interface projectProps {
@@ -43,7 +42,7 @@ export default function ProjectCard({
 	return (
 		<Box
 			ref={sectionRef}
-			className="group project-card"
+			className="group project-card transition-all duration-500"
 			sx={{
 				position: "relative",
 				color: "hsl(var(--text-color-dark))",
