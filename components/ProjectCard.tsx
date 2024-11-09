@@ -111,9 +111,10 @@ export default function ProjectCard({
 				sx={{
 					display: "grid",
 					backgroundColor: "transparent",
-					backgroundImage: `linear-gradient(to top,hsl(var(--bg-color-dark)) 20%, transparent), url(${secondaryImgUrl})`,
+					backgroundImage: `linear-gradient(to top,hsl(var(--bg-color-dark)) 20%, transparent), url(${primaryImgUrl})`,
 					backgroundRepeat: "no-repeat",
 					backgroundSize: "cover",
+					backgroundPosition: "center center",
 					borderRadius: "0.75rem",
 					transition:
 						"transform 750ms cubic-bezier(0.68, -0.55, 0.27, 1.55), color 750ms cubic-bezier(0.68, -0.55, 0.27, 1.55), background-color 750ms cubic-bezier(0.68, -0.55, 0.27, 1.55), opacity 750ms cubic-bezier(0.68, -0.55, 0.27, 1.55), backdrop-filter 750ms cubic-bezier(0.68, -0.55, 0.27, 1.55)",
@@ -143,7 +144,7 @@ export default function ProjectCard({
 				className="after"
 				sx={{
 					content: "''",
-					backgroundImage: `url(${primaryImgUrl})`,
+					backgroundImage: `url(${secondaryImgUrl})`,
 					position: "absolute",
 					inset: 0,
 					backgroundColor: "transparent",
