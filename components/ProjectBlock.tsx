@@ -37,7 +37,8 @@ export default function ProjectBlock() {
 				>
 					<button
 						onClick={handlePrevious}
-						className="md:hidden absolute left-1 top-1/2 -translate-y-1/2 z-10 bg-gray-800/90 p-2 rounded-full hover:bg-gray-700 transition-colors"
+						className="md:hidden absolute left-0 top-1/2 -translate-y-1/2 z-20 
+						bg-[hsl(var(--bg-color),0.75)] p-2 rounded-full hover:bg-[hsl(var(--bg-color))] transition-colors"
 						aria-label="Previous project"
 					>
 						<svg
@@ -56,7 +57,8 @@ export default function ProjectBlock() {
 
 					<button
 						onClick={handleNext}
-						className="md:hidden absolute right-1 top-1/2 -translate-y-1/2 z-10 bg-gray-800/90 p-2 rounded-full hover:bg-gray-700 transition-colors"
+						className="md:hidden absolute right-0 top-1/2 -translate-y-1/2 z-20 
+						bg-[hsl(var(--bg-color),0.75)] p-2 rounded-full hover:bg-[hsl(var(--bg-color))] transition-colors"
 						aria-label="Next project"
 					>
 						<svg
