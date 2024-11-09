@@ -42,7 +42,7 @@ export default function ProjectCard({
 	return (
 		<Box
 			ref={sectionRef}
-			className="group project-card transition-all duration-500"
+			className="group project-card transition-all duration-500 w-full md:w-auto flex-shrink-0"
 			sx={{
 				position: "relative",
 				color: "hsl(var(--text-color-dark))",
@@ -53,8 +53,6 @@ export default function ProjectCard({
 				"&:hover .before": {
 					color: "hsl(var(--text-color-dark))",
 					opacity: 1,
-					transform: "translate(1rem) rotate(12deg)",
-					transformOrigin: "bottom",
 					cursor: "pointer",
 					WebkitBackdropFilter:
 						"blur(4px) brightness(.5) grayscale(20%) saturate(1.5)",
@@ -62,24 +60,37 @@ export default function ProjectCard({
 						"blur(4px) brightness(.5) grayscale(20%) saturate(1.5)",
 				},
 
-				"&:hover .after": {
-					zIndex: -10,
-					transform: "translate(-1rem) rotate(-12deg)",
-					backgroundColor: "hsla(0,0%,100%,0.15)",
-					opacity: 1,
-				},
+				"@media (min-width:768px)": {
+					"&:hover .before": {
+						color: "hsl(var(--text-color-dark))",
+						opacity: 1,
+						transform: "translate(1rem) rotate(12deg)",
+						transformOrigin: "bottom",
+						cursor: "pointer",
+						WebkitBackdropFilter:
+							"blur(4px) brightness(.5) grayscale(20%) saturate(1.5)",
+						backdropFilter:
+							"blur(4px) brightness(.5) grayscale(20%) saturate(1.5)",
+					},
 
-				"&:hover h3": {
-					transform: "translateY(calc( 0.5rem + 5rem + 9rem))",
+					"&:hover .after": {
+						zIndex: -10,
+						transform: "translate(-1rem) rotate(-12deg)",
+						backgroundColor: "hsla(0,0%,100%,0.15)",
+						opacity: 1,
+					},
+
+					"&:hover h3": {
+						transform: "translateY(calc( 0.5rem + 5rem + 9rem))",
+					},
 				},
 			}}
 		>
 			<Box
-				className="before"
+				className="before p-4 md:p-8"
 				sx={{
 					position: "absolute",
 					inset: 0,
-					padding: "2rem",
 					backgroundColor: "hsla(var(--bg-color),0.15)",
 					color: "transparent",
 					borderRadius: "0.75rem",
@@ -101,6 +112,8 @@ export default function ProjectCard({
 					display: "grid",
 					backgroundColor: "transparent",
 					backgroundImage: `linear-gradient(to top,hsl(var(--bg-color-dark)) 20%, transparent), url(${secondaryImgUrl})`,
+					backgroundRepeat: "no-repeat",
+					backgroundSize: "cover",
 					borderRadius: "0.75rem",
 					transition:
 						"transform 750ms cubic-bezier(0.68, -0.55, 0.27, 1.55), color 750ms cubic-bezier(0.68, -0.55, 0.27, 1.55), background-color 750ms cubic-bezier(0.68, -0.55, 0.27, 1.55), opacity 750ms cubic-bezier(0.68, -0.55, 0.27, 1.55), backdrop-filter 750ms cubic-bezier(0.68, -0.55, 0.27, 1.55)",
@@ -121,7 +134,7 @@ export default function ProjectCard({
 				<p
 					className="mb-4 scale-y-100 origin-bottom transition-[transform,opacity]
 				line-clamp-3 duration-500
-				group-hover:opacity-0"
+				md:group-hover:opacity-0"
 				>
 					{description}
 				</p>

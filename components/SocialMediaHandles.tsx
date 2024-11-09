@@ -4,7 +4,7 @@ export default function SocialMediaHandles() {
 			<h3 className="text-2xl font-bold text-accent mt-12">
 				Check my Social Handles
 			</h3>
-			<div className="flex mt-8 justify-around md:justify-start md:gap-16">
+			<div className="flex flex-wrap mt-8 justify-around md:justify-start md:gap-16">
 				<div role="button">
 					<a
 						className="block size-12 md:size-16 mx-auto"
