@@ -19,7 +19,7 @@ code
 *::after
 {
 	box-sizing: border-box;
-	/* outline: 2px solid #00A10055; */
+	outline: 2px solid #00A10055;
 }
 
 /* Remove default margin */
@@ -45,11 +45,11 @@ ol[role='list']
 }
 
 /* Set core root defaults */
-html
+/* html
 {
 	scroll-behavior: smooth;
 	scroll-padding-top: 7rem;
-}
+} */
 
 /* Set core body defaults */
 body

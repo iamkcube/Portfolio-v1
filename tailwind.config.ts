@@ -17,7 +17,7 @@ const config: Config = {
 				voyager: ["var(--font-voyager)", "sans-serif"],
 			},
 			animation: {
-				"line-anim": "line-anim 5s ease 3s infinite",
+				"line-anim": "line-anim 5s ease-in-out 3s infinite alternate",
 			},
 			keyframes: {
 				"line-anim": {

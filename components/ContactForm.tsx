@@ -63,11 +63,12 @@ export default function ContactForm() {
 
 	return (
 		<form
-			className="grid grid-cols-2 gap-8 max-w-5xl mb-4"
+			className="grid md:grid-cols-2 gap-4 md:gap-8 max-w-5xl mb-4"
 			onSubmit={onSubmit}
 		>
 			<input
-				className="p-4 rounded-md text-accent bg-[color-mix(in_lab,hsl(var(--bg-color)),white_10%)] border-blue-50 outline-none focus:outline-accent"
+				className="p-4 rounded-md text-accent bg-[color-mix(in_lab,hsl(var(--bg-color)),white_10%)] border-blue-50 outline-none 
+				placeholder:text-[color-mix(in_lab,transparent_20%,hsl(var(--text-color)))] focus:outline-accent"
 				type="text"
 				name="name"
 				placeholder="Name *"
@@ -75,7 +76,8 @@ export default function ContactForm() {
 				title="Must be a valid name"
 			/>
 			<input
-				className="p-4 rounded-md text-accent bg-[color-mix(in_lab,hsl(var(--bg-color)),white_10%)] border-blue-50 outline-none outline-offset-1
+				className="p-4 rounded-md text-accent bg-[color-mix(in_lab,hsl(var(--bg-color)),white_10%)] border-blue-50 outline-none 
+				placeholder:text-[color-mix(in_lab,transparent_20%,hsl(var(--text-color)))] outline-offset-1
 					focus:outline-accent
 					[&:not(:placeholder-shown):invalid]:outline-red-500"
 				type="email"
@@ -86,17 +88,20 @@ export default function ContactForm() {
 				title="Must be a valid email address"
 			/>
 			<textarea
-				className="p-4 rounded-md col-span-2 bg-[color-mix(in_lab,hsl(var(--bg-color)),white_10%)] border-blue-50 outline-none focus:outline-accent"
+				className="p-4 rounded-md md:col-span-2 bg-[color-mix(in_lab,hsl(var(--bg-color)),white_10%)] border-blue-50 outline-none 
+				placeholder:text-[color-mix(in_lab,transparent_20%,hsl(var(--text-color)))] focus:outline-accent"
 				name="message"
 				placeholder="Enter your message"
 				rows={5}
 			/>
 			<button
-				className="px-7 py-3 col-span-2 justify-self-center rounded-md 
+				className="px-7 py-3 md:col-span-2 justify-self-center rounded-md 
 				transition-[transform,background-color,color] duration-500 ease-in-out
 					hover:!bg-orange-600 hover:text-[hsl(var(--bg-color))] hover:scale-95"
 				style={{
-					backgroundColor: error ? "red" : "rgb(154 52 18)",
+					backgroundColor: error
+						? "red"
+						: "color-mix(in lab, rgb(154 52 18), hsl(var(--bg-color)) 30%)",
 				}}
 				type="submit"
 				disabled={isLoading}

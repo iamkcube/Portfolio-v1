@@ -4,7 +4,7 @@ export default function AboutSection() {
 			<p className="text-xl">
 				Hi, I&apos;m <strong>Kalinga Kumar Khatua</strong> 👋
 			</p>
-			<p className="w-[70ch]">
+			<p className="max-w-[70ch]">
 				I&apos;m a <strong>Full-Stack Developer</strong> with over 3
 				years of experience, specializing in <strong>React</strong> and{" "}
 				<strong>Next.js</strong>, passionate about creating scalable,
@@ -14,7 +14,7 @@ export default function AboutSection() {
 				<strong>front-end</strong> and <strong>back-end</strong>{" "}
 				development.
 			</p>
-			<section className="grid gap-2 mt-4 w-[70ch]">
+			<section className="grid gap-2 mt-4 max-w-[70ch]">
 				<h3 className="text-2xl font-bold">My Journey 🚀</h3>
 				<hr className="opacity-20" />
 				<p>
@@ -36,7 +36,7 @@ export default function AboutSection() {
 					.
 				</p>
 			</section>
-			<section className="grid gap-2 mt-4 w-[70ch]">
+			<section className="grid gap-2 mt-4 max-w-[70ch]">
 				<h3 className="text-2xl font-bold">What Drives Me 🔥</h3>
 				<hr className="opacity-20" />
 				<p>
@@ -57,7 +57,7 @@ export default function AboutSection() {
 					boundaries of what&apos;s possible in development.
 				</p>
 			</section>
-			<section className="grid gap-2 mt-4 w-[70ch]">
+			<section className="grid gap-2 mt-4 max-w-[70ch]">
 				<h3 className="text-2xl font-bold">Skills Snapshot 💡</h3>
 				<hr className="opacity-20" />
 				<ul className="grid gap-1">

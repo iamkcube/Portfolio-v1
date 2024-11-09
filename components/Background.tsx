@@ -17,10 +17,10 @@ export default function Background() {
 			className="after:content-[''] after:absolute after:top-0 after:left-0 w-full after:w-full after:max-h-screen after:bg-noise-bg after:z-50"
 		>
 			<MetaballsCanvas
-				color1="#007B7F"
-				color2="#001F3F"
-				// color1="#79abf9"
-				// color2="#11375d"
+				// color1="#007B7F"
+				// color2="#001F3F"
+				color1="#79abf9"
+				color2="#11375d"
 				noOfBalls={8}
 			/>
 			<svg display="none">

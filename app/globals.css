@@ -57,3 +57,49 @@ strong
 {
 	color: var(--accent-color);
 }
+
+body
+{
+	scrollbar-gutter: stable;
+}
+
+::-webkit-scrollbar
+{
+	background: transparent;
+	width: 4px;
+	border-radius: 100vh;
+}
+
+:is(:not(body))::-webkit-scrollbar-thumb
+{
+	background: var(--accent-color);
+	border-radius: 100vh;
+}
+
+:is(:not(body))::-webkit-scrollbar-thumb:hover
+{
+	background: color-mix(in lab, var(--accent-color), transparent 50%);
+	border-radius: 100vh;
+}
+
+body::-webkit-scrollbar-thumb
+{
+	background: var(--accent-color);
+	border-radius: 100vh;
+}
+
+body::-webkit-scrollbar-thumb:hover
+{
+	background: color-mix(in lab, var(--accent-color), transparent 50%);
+	border-radius: 100vh;
+}
+
+::selection
+{
+	background-color: color-mix(in lab, var(--accent-color), transparent 60%);
+}
+
+body
+{
+	counter-reset: section-number;
+}

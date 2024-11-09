@@ -32,13 +32,11 @@ const ThemeSwitcher = () => {
 		<button
 			id="theme-switcher"
 			aria-label="Theme Switch"
-			className="cursor-pointer bg-transparent border-0 opacity-80 w-8 h-8 rounded-full relative isolation-isolate hover:opacity-100 focus-visible:opacity-100"
+			className="cursor-pointer bg-transparent border-0 opacity-80 size-6 md:size-8 rounded-full relative isolation-isolate hover:opacity-100 focus-visible:opacity-100"
 			onClick={toggleTheme}
 		>
 			<svg
 				xmlns="http://www.w3.org/2000/svg"
-				width="32"
-				height="32"
 				viewBox="0 0 472.39 472.39"
 				className={`fill-current ${
 					!isDarkMode ? "text-accent" : "text-gray-300"
