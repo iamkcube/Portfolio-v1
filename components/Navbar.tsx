@@ -38,7 +38,9 @@ export default function Navbar() {
 				const element = document.querySelector(targetId);
 				if (element) {
 					const targetPosition =
-						element.getBoundingClientRect().top + window.scrollY;
+						element.getBoundingClientRect().top +
+						window.scrollY -
+						7 * 16; // 7rem scroll padding
 					smoothScrollTo(targetPosition);
 				}
 			}

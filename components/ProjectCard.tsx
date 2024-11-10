@@ -8,6 +8,8 @@ interface projectProps {
 	description: string;
 	primaryImgUrl: string;
 	secondaryImgUrl: string;
+	projectUrl: string;
+	hostedUrl: string;
 }
 
 export default function ProjectCard({
@@ -15,6 +17,8 @@ export default function ProjectCard({
 	description,
 	primaryImgUrl,
 	secondaryImgUrl,
+	projectUrl,
+	hostedUrl,
 }: projectProps) {
 	const sectionRef = useRef<HTMLDivElement | null>(null);
 	// const [sectionHeight, setSectionHeight] = useState<number>(0);
@@ -93,6 +97,9 @@ export default function ProjectCard({
 					inset: 0,
 					backgroundColor: "hsla(var(--bg-color),0.15)",
 					color: "transparent",
+					display: "flex",
+					flexDirection: "column",
+					justifyContent: "space-between",
 					borderRadius: "0.75rem",
 					zIndex: 10,
 					transformOrigin: "bottom",
@@ -105,6 +112,28 @@ export default function ProjectCard({
 				}}
 			>
 				<p>{description}</p>
+				<div className="flex gap-2 md:gap-4">
+					<button
+						className="w-full px-3 py-2 bg-accent text-[hsl(var(--text-color-light))] font-bold rounded-md
+								transition-colors duration-300 leading-none
+								hover:bg-amber-400"
+						onClick={() => {
+							window.open(projectUrl, "_blank");
+						}}
+					>
+						View on Github
+					</button>
+					{hostedUrl && <button
+						className="w-full px-3 py-2 bg-[hsl(var(--bg-color))] text-[hsl(var(--text-color))] font-bold rounded-md
+								transition-colors duration-300 leading-none
+								hover:bg-[hsl(var(--text-color))] hover:text-[hsl(var(--bg-color))]"
+						onClick={() => {
+							window.open(hostedUrl, "_blank");
+						}}
+					>
+						Check Website
+					</button>}
+				</div>
 			</Box>
 			<Box
 				className="px-4 md:p-6"

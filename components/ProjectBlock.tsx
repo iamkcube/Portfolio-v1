@@ -77,7 +77,7 @@ export default function ProjectBlock() {
 					<Box
 						className="flex
 						md:grid
-						md:grid-cols-[repeat(auto-fit,minmax(18.5rem,1fr))]
+						md:grid-cols-[repeat(auto-fit,minmax(19rem,1fr))]
 						gap-x-4 gap-y-32
 						md:gap-x-12 md:gap-y-32
 						transition-[translate] duration-500
@@ -105,6 +105,8 @@ export default function ProjectBlock() {
 									description={project.description}
 									primaryImgUrl={project.primaryImgUrl}
 									secondaryImgUrl={project.secondaryImgUrl}
+									projectUrl={project.projectUrl}
+									hostedUrl={project.hostedUrl}
 								/>
 								{/* {index < projects.length - 1 && <div></div>} */}
 							</React.Fragment>
