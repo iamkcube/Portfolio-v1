@@ -40,7 +40,7 @@
 body
 {
 	background-color: hsl(var(--bg-color));
-	background-image: linear-gradient(to left, hsla(var(--bg-color), 0) 10%, hsla(var(--bg-color), 1)), url("../assets/images/noise.png");
+	background-image: linear-gradient(to left, hsla(var(--bg-color), 0) 10%, hsla(var(--bg-color), 1)), url("/noise.webp");
 	/* filter: url("#noiseFilter"); */
 	color: hsl(var(--text-color));
 	transition: background-color var(--button-transition-time) var(--button-transition-function),

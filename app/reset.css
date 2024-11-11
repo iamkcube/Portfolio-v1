@@ -3,8 +3,7 @@ body
 	margin: 0;
 	background-color: var(--body-color);
 	/* filter: url(#noiseFilter) brightness(100%) contrast(125%); */
-	font-family: "Mark Pro", system-ui, -apple-system, BlinkMacSystemFont, 'Segoe UI', 'Roboto', 'Oxygen',
-		'Ubuntu', 'Cantarell', 'Fira Sans', 'Droid Sans', 'Helvetica Neue', sans-serif;
+	font-family: "Times New Roman", Georgia, Cambria, "Palatino Linotype", "Book Antiqua", system-ui, -apple-system, BlinkMacSystemFont, 'Segoe UI', 'Roboto', 'Oxygen', 'Ubuntu', 'Cantarell', 'Fira Sans', 'Droid Sans', 'Helvetica Neue', serif;
 }
 
 code

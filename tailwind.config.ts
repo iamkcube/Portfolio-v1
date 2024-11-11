@@ -14,7 +14,8 @@ const config: Config = {
 				accent: "var(--accent-color)",
 			},
 			fontFamily: {
-				voyager: ["var(--font-voyager)", "sans-serif"],
+				sans: ['var(--font-voyager)', 'serif'],
+				voyager: ["var(--font-voyager)", "serif"],
 			},
 			animation: {
 				"line-anim": "line-anim 5s ease-in-out 3s infinite alternate",
@@ -28,7 +29,7 @@ const config: Config = {
 		},
 		backgroundImage: {
 			"noisy-bg": "url('./../assets/images/noisy.webp')",
-			"noise-bg": "url('./../assets/images/noise.webp')",
+			"noise-bg": "url('/noise.webp')",
 		},
 	},
 	plugins: [],

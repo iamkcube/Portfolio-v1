@@ -31,8 +31,10 @@ const voyager = localFont({
 			style: "normal",
 		},
 	],
+	fallback: ["serif"],
 	variable: "--font-voyager",
-	display: "swap",
+	adjustFontFallback: "Times New Roman",
+	preload: true,
 });
 
 export const metadata: Metadata = {
@@ -50,6 +52,14 @@ export default function RootLayout({
 			lang="en"
 			className="dark"
 		>
+			<head>
+				<link
+					rel="preload"
+					href="/noise.webp" /* Replace with your image path */
+					as="image"
+					type="image/webp" /* Update type as needed, e.g., image/png */
+				/>
+			</head>
 			<body className={`${voyager.variable} antialiased`}>
 				<AppRouterCacheProvider>{children}</AppRouterCacheProvider>
 			</body>
