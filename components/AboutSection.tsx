@@ -10,7 +10,7 @@ export default function AboutSection() {
 				<strong>Next.js</strong>, passionate about creating scalable,
 				high-performance applications that prioritize exceptional{" "}
 				<strong>UI/UX design</strong>. My love for solving complex
-				problems has driven me to continuously refine my skills in
+				problems has driven me to continuously refine my skills in{" "}
 				<strong>front-end</strong> and <strong>back-end</strong>{" "}
 				development.
 			</p>
@@ -26,7 +26,7 @@ export default function AboutSection() {
 					problems, and contributed to the product&apos;s overall
 					success.
 					<br />
-					One of my proudest accomplishments was delivering a
+					One of my proudest accomplishments was delivering a{" "}
 					<strong>TechFest website</strong> in just one week,
 					integrating <strong>real-time registration</strong> and{" "}
 					<strong>

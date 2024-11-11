@@ -56,7 +56,7 @@ export default function SocialMediaHandles() {
 				<div role="button">
 					<a
 						className="block size-12 md:size-16 mx-auto"
-						href="https://leetcode.com/iamkcube"
+						href="https://www.instagram.com/kalinga._"
 						target="_blank"
 						aria-label="Visit my Instagram"
 					>
