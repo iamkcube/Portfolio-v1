@@ -43,7 +43,7 @@ export const metadata: Metadata = {
 		default: "Kalinga - Portfolio Website",
 	},
 	description:
-		"Full Stack Developer with 3+ years of experience specializing in React, Next.js, and TypeScript. Recent experience at Planocast and East Coast Railway. CGPA 9.23 at OUTR.",
+		"Full Stack Developer with 3+ years of experience specializing in React, Next.js, and TypeScript. Recent experience at Planocast and East Coast Railway.",
 	keywords: [
 		"full stack developer",
 		"react developer",
