@@ -12,6 +12,7 @@ export default function AboutBlock() {
 					className="hidden md:block w-full md:mt-24"
 					src={profilePicDesktop}
 					alt="Kalinga's Profile Picture"
+					loading="lazy"
 				/>
 			</BlockCounter>
 			<div
@@ -25,6 +26,7 @@ export default function AboutBlock() {
 					className="md:hidden w-full mt-4"
 					src={profilePicMobile}
 					alt="Kalinga's Profile Picture"
+					loading="lazy"
 				/>
 				<AboutSection />
 			</div>
