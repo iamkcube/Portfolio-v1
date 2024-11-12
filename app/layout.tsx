@@ -38,6 +38,7 @@ const voyager = localFont({
 });
 
 export const metadata: Metadata = {
+	metadataBase: new URL("https://iamkcube.vercel.app"),
 	title: {
 		template: "%s | Kalinga - Portfolio",
 		default: "Kalinga - Portfolio Website",
@@ -63,11 +64,13 @@ export const metadata: Metadata = {
 		"google cloud",
 	],
 	openGraph: {
-		title: "Kalinga Kumar Khatua - Full Stack Developer Portfolio",
-		description:
-			"Full Stack Developer with 3+ years of experience specializing in React, Next.js, and TypeScript. Recent experience at Planocast and East Coast Railway.",
 		type: "website",
 		locale: "en_IN",
+		url: "/",
+		siteName: "Kalinga Kumar Khatua - Portfolio",
+		title: "Kalinga Kumar Khatua - Full Stack Developer Portfolio",
+		description:
+			"Full Stack Developer with 3+ years of experience specializing in React, Next.js, and TypeScript. Recent experience at Planocast and East Coast Railway. CGPA 9.23 at OUTR.",
 		images: [
 			{
 				url: "/og-image.webp",
@@ -76,6 +79,14 @@ export const metadata: Metadata = {
 				alt: "Kalinga Kumar Khatua - Full Stack Developer Portfolio",
 			},
 		],
+	},
+	twitter: {
+		card: "summary_large_image",
+		title: "Kalinga Kumar Khatua - Full Stack Developer",
+		description:
+			"Full Stack Developer with 3+ years of experience specializing in React, Next.js, and TypeScript.",
+		creator: "@iamkcube_",
+		images: ["/og-image.webp"],
 	},
 	robots: {
 		index: true,
