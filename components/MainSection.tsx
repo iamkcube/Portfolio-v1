@@ -1,4 +1,8 @@
+import { useDarkMode } from "@/contexts/DarkModeContext";
+
 export default function MainSection() {
+	const { isDarkMode } = useDarkMode();
+
 	return (
 		<main
 			className="flex flex-col gap-8 items-center 
@@ -22,7 +26,13 @@ export default function MainSection() {
 			<a
 				href="/Resume - Kalinga Kumar Khatua - Software Developer.pdf"
 				download="Resume - Kalinga Kumar Khatua - Software Developer.pdf"
-				className="px-4 py-3 md:px-6 md:py-4 bg-[hsl(var(--bg-color))] text-[hsl(var(--text-color))] rounded-lg shadow-2xl shadow-gray-800 transition-transform hover:scale-95"
+				className={`px-4 py-3 md:px-6 md:py-4 bg-[hsl(var(--bg-color))] text-[hsl(var(--text-color))] rounded-lg shadow-2xl ${
+					isDarkMode ? "shadow-amber-800" : "shadow-purple-800"
+				} 
+				transition-[transform,box-shadow] duration-300 
+				hover:scale-95
+				hover:shadow-xl ${isDarkMode ? "hover:shadow-amber-800" : "hover:shadow-purple-500"}
+				`}
 			>
 				Download My Resume
 			</a>
