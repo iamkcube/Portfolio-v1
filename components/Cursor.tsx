@@ -30,8 +30,9 @@ const Circle = styled("div")({
 		// backgroundImage: "linear-gradient(to right, red, yellow, lime, cyan, blue, magenta, red)",
 	},
 	"body:has(.main-text:hover) &": {
-		mixBlendMode: "exclusion",
-		backgroundColor: "hsla(var(--text-color), 1)",
+		// mixBlendMode: "exclusion",
+		// backgroundColor: "hsla(var(--text-color), 1)",
+		backgroundColor: "hsla(var(--text-color), 0.1)",
 	},
 });
 

@@ -2,6 +2,7 @@ import type { Metadata } from "next";
 import localFont from "next/font/local";
 import "./globals.css";
 import { AppRouterCacheProvider } from "@mui/material-nextjs/v14-appRouter";
+import { DarkModeProvider } from "@/contexts/DarkModeContext";
 
 const voyager = localFont({
 	src: [
@@ -189,9 +190,11 @@ export default function RootLayout({
 					}}
 				/>
 			</head>
-			<body className={`${voyager.variable} antialiased`}>
-				<AppRouterCacheProvider>{children}</AppRouterCacheProvider>
-			</body>
+			<DarkModeProvider initialDarkMode={true}>
+				<body className={`${voyager.variable} antialiased`}>
+					<AppRouterCacheProvider>{children}</AppRouterCacheProvider>
+				</body>
+			</DarkModeProvider>
 		</html>
 	);
 }

@@ -1,39 +1,41 @@
 "use client";
 
-import { useState, useEffect } from "react";
+import { useDarkMode } from "@/contexts/DarkModeContext";
 
 const ThemeSwitcher = () => {
-	const [isDarkMode, setIsDarkMode] = useState(true);
+	// const [isDarkMode, setIsDarkMode] = useState(true);
+	const { isDarkMode, toggleDarkMode } = useDarkMode();
 
-	useEffect(() => {
-		// Check for saved theme in localStorage
-		const savedTheme = localStorage.getItem("theme");
-		if (savedTheme === "light") {
-			setIsDarkMode(false);
-			document.documentElement.classList.remove("dark");
-		} else {
-			setIsDarkMode(true);
-			document.documentElement.classList.add("dark");
-		}
-	}, []);
 
-	const toggleTheme = () => {
-		if (isDarkMode) {
-			document.documentElement.classList.remove("dark");
-			localStorage.setItem("theme", "light");
-		} else {
-			document.documentElement.classList.add("dark");
-			localStorage.setItem("theme", "dark");
-		}
-		setIsDarkMode(!isDarkMode);
-	};
+	// useEffect(() => {
+	// 	// Check for saved theme in localStorage
+	// 	const savedTheme = localStorage.getItem("theme");
+	// 	if (savedTheme === "light") {
+	// 		setIsDarkMode(false);
+	// 		document.documentElement.classList.remove("dark");
+	// 	} else {
+	// 		setIsDarkMode(true);
+	// 		document.documentElement.classList.add("dark");
+	// 	}
+	// }, []);
+
+	// const toggleTheme = () => {
+	// 	if (isDarkMode) {
+	// 		document.documentElement.classList.remove("dark");
+	// 		localStorage.setItem("theme", "light");
+	// 	} else {
+	// 		document.documentElement.classList.add("dark");
+	// 		localStorage.setItem("theme", "dark");
+	// 	}
+	// 	setIsDarkMode(!isDarkMode);
+	// };
 
 	return (
 		<button
 			id="theme-switcher"
 			aria-label="Theme Switch"
 			className="cursor-pointer bg-transparent border-0 opacity-80 size-6 md:size-8 rounded-full relative isolation-isolate hover:opacity-100 focus-visible:opacity-100"
-			onClick={toggleTheme}
+			onClick={toggleDarkMode}
 		>
 			<svg
 				xmlns="http://www.w3.org/2000/svg"

@@ -53,7 +53,7 @@ export default function Navbar() {
 			className="flex md:grid grid-cols-subgrid justify-between items-center w-full sticky top-0 pt-6 md:col-span-2 z-40
             before:content-[''] before:absolute 
 			before:w-[calc(100%_+_2rem)] md:before:w-[calc(100%_+_8rem)] before:h-[calc(100%_+_4rem)] 
-			before:-mt-4 before:-ml-4 md:before:-ml-16
+			before:-mt-6 before:-ml-4 md:before:-ml-16
 			before:bg-[linear-gradient(to_bottom,hsla(var(--bg-color),0.75)_60%,transparent)]"
 		>
 			<div className="logo font-bold md:font-normal text-base md:text-2xl z-50">
