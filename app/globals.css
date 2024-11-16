@@ -7,7 +7,7 @@
 :root
 {
 	--bg-color: 212, 15%, 90%;
-	--bg-color-dark: 240, 100%, 3%;
+	--bg-color-dark: 240, 40%, 3%;
 	--text-color: 0, 0%, 8%;
 	--text-color-light: 0, 0%, 8%;
 	--text-color-dark: 212, 15%, 90%;
@@ -20,7 +20,7 @@
 {
 	:root
 	{
-		--bg-color: 240, 100%, 3%;
+		--bg-color: 240, 40%, 3%;
 		--text-color: 212, 15%, 90%;
 	}
 } */
@@ -33,7 +33,7 @@
 
 .dark
 {
-	--bg-color: 240, 100%, 3%;
+	--bg-color: 240, 40%, 3%;
 	--text-color: 212, 15%, 90%;
 }
 
