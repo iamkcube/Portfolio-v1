@@ -7,7 +7,7 @@ export default function MainSection() {
 		>
 			<div
 				className="grid font-bold text-[clamp(3rem,8vw,5rem)] leading-none gap-2 drop-shadow-xl 
-			mt-[calc(calc(calc(100vh_-_calc(2*var(--gap)))_/_2)-14rem)] md:mt-0
+			mt-[calc(calc(calc(100vh_-_calc(2*var(--gap)))_/_2)-12rem)] md:mt-0
 			"
 			>
 				<span className="main-text hover:shadow-sm w-fit">Design.</span>

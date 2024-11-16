@@ -34,7 +34,7 @@ export default function Background() {
 				color2="#11375d"
 				noOfBalls={8}
 			/> */}
-			<svg display="none">
+			<svg width="0" height="0" display="none">
 				<filter id="noiseFilter">
 					<feTurbulence
 						type="fractalNoise"

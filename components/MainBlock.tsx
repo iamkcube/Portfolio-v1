@@ -6,7 +6,7 @@ export default function MainBlock() {
 		<>
 			{" "}
 			<div className="md:grid justify-end hidden">
-				<p className="text-md ml-auto text-right font-bold max-w-[15ch] mt-3">
+				<p className="text-md ml-auto text-right font-bold max-w-[15ch] md:mt-3">
 					Experienced Fullstack developer specializing in React,
 					Next.js, and user-centric design.
 				</p>
