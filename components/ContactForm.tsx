@@ -1,12 +1,13 @@
 "use client";
 
-import { FormEvent, useEffect, useState } from "react";
+import { FormEvent, useEffect, useRef, useState } from "react";
 
 export default function ContactForm() {
 	const [isLoading, setIsLoading] = useState<boolean>(false);
 	const [isSuccess, setIsSuccess] = useState<boolean>(false);
 	const [error, setError] = useState<string | null>(null);
 	const [buttonText, setButtonText] = useState("Get in Touch");
+	const contactFormRef = useRef<HTMLFormElement>(null);
 
 	useEffect(() => {
 		if (isSuccess) {
@@ -48,6 +49,9 @@ export default function ContactForm() {
 			const result = await response.json();
 			if (result.success) {
 				setIsSuccess(true);
+				if (contactFormRef && contactFormRef.current) {
+					contactFormRef.current.reset();
+				}
 			}
 		} catch (error) {
 			if (error instanceof Error) {
@@ -64,6 +68,7 @@ export default function ContactForm() {
 	return (
 		<form
 			className="grid md:grid-cols-2 gap-4 md:gap-8 max-w-5xl mb-4"
+			ref={contactFormRef}
 			onSubmit={onSubmit}
 		>
 			<input
