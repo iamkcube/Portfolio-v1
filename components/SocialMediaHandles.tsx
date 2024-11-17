@@ -1,122 +1,26 @@
+import { socials } from "@/assets/ts/socials";
+import SocialIcon from "@/components/SocialIcon";
+
 export default function SocialMediaHandles() {
 	return (
 		<section>
 			<h3 className="text-2xl font-bold text-accent mt-12">
 				Check my Social Handles
 			</h3>
-			<div className="flex flex-wrap mt-8 justify-around md:justify-start md:gap-16">
-				<div role="button">
-					<a
-						className="block size-12 md:size-16 mx-auto"
-						href="https://www.linkedin.com/in/kalingakhatua"
-						target="_blank"
-						aria-label="Visit my LinkedIn"
-					>
-						<svg
-							className="group"
-							viewBox="0 0 150 150"
-							fill="none"
-							xmlns="http://www.w3.org/2000/svg"
-						>
-							<path
-								className="[stroke-dasharray:1232px] [stroke-dashoffset:1232px] animate-line-anim fill-transparent transition-[fill] group-hover:[animation-duration:0s] group-hover:fill-[hsl(var(--text-color))]"
-								d="M129.167 130.396H130.167V129.396V85.45C130.167 78.0141 127.198 70.8839 121.915 65.6274C116.632 60.3712 109.469 57.4192 102 57.4192C95.5497 57.4192 88.2224 60.8075 83.6667 66.1444V59.9946V58.9946H82.6667H59.4167H58.4167V59.9946V129.396V130.396H59.4167H82.6667H83.6667V129.396V88.5179C83.6667 82.681 88.3902 77.9096 94.25 77.9096C97.0806 77.9096 99.7942 79.0285 101.794 81.0185C103.794 83.0083 104.917 85.706 104.917 88.5179V129.396V130.396H105.917H129.167ZM43.9167 130.396H44.9167V129.396V59.9946V58.9946H43.9167H20.8333H19.8333V59.9946V129.396V130.396H20.8333H43.9167ZM133.333 1.875C137.49 1.875 141.475 3.51802 144.413 6.44102C147.351 9.36385 149 13.327 149 17.4583V133.542C149 137.673 147.351 141.636 144.413 144.559C141.475 147.482 137.49 149.125 133.333 149.125H16.6667C12.51 149.125 8.52457 147.482 5.58688 144.559C2.64937 141.636 1 137.673 1 133.542V17.4583C1 13.327 2.64937 9.36385 5.58688 6.44102C8.52457 3.51802 12.51 1.875 16.6667 1.875H133.333ZM32.3333 47.9767C36.31 47.9767 40.1247 46.4049 42.9382 43.6055C45.7518 40.806 47.3333 37.008 47.3333 33.0467C47.3333 24.7861 40.6386 18.0338 32.3333 18.0338C28.3346 18.0338 24.4986 19.6143 21.6696 22.4292C18.8404 25.2442 17.25 29.0634 17.25 33.0467C17.25 41.3226 24.0435 47.9767 32.3333 47.9767Z"
-								stroke="hsl(var(--text-color))"
-								strokeWidth="2"
-							/>
-						</svg>
-					</a>
-					<p className="text-center mt-4">LinkedIn</p>
-				</div>
-				<div role="button">
-					<a
-						className="block size-12 md:size-16 mx-auto"
-						href="https://leetcode.com/iamkcube"
-						target="_blank"
-						aria-label="Visit my Leetcode"
-					>
-						<svg
-							className="group"
-							viewBox="0 0 800 800"
-							fill="none"
-							xmlns="http://www.w3.org/2000/svg"
-						>
-							<g>
-								<path
-									className="[stroke-dasharray:4082px] [stroke-dashoffset:4082px] animate-line-anim fill-transparent transition-[fill] group-hover:[animation-duration:0s] group-hover:fill-[hsl(var(--text-color))]"
-									d="M540.208 601.262L540.24 601.231L540.272 601.199C555.28 586.161 580.475 586.48 596.498 602.502C612.518 618.522 612.842 643.72 597.798 658.764L597.788 658.774L597.779 658.783L510.831 746.664C510.828 746.668 510.824 746.671 510.821 746.675C479.145 778.345 435.28 795 386.533 795C337.683 795 293.855 779.581 262.274 748.069C262.271 748.067 262.268 748.064 262.265 748.061L117.374 602.703L117.367 602.696C85.7495 571.111 69.0332 525.891 69.0332 477.067C69.0332 428.285 85.7227 384.448 117.369 352.769C117.369 352.768 117.37 352.768 117.371 352.767L454.032 16.0723C469.117 1.01679 494.351 1.32242 510.364 17.3356C526.384 33.3548 526.707 58.5805 511.605 73.6243L511.588 73.6405L511.572 73.6568L429.339 157.09L423.018 163.503L431.803 165.478C461.686 172.197 489.08 187.174 510.865 208.703C510.872 208.71 510.878 208.716 510.885 208.722L597.813 296.551L597.822 296.56L597.831 296.569C612.873 311.611 612.554 336.812 596.528 352.868C580.508 368.884 555.315 369.207 540.272 354.135L540.24 354.102L540.208 354.071L450.339 267.235C433.591 250.473 410.655 243.733 386.066 243.733C361.589 243.733 338.146 249.85 321.298 266.698L321.285 266.71L321.273 266.723L177.331 412.698C177.327 412.702 177.322 412.707 177.318 412.711C160.676 429.361 152.467 452.17 152.467 477.033C152.467 501.821 160.631 525.965 177.326 542.664C177.328 542.665 177.329 542.667 177.331 542.669L321.718 688.09L321.725 688.096L321.731 688.102C338.513 704.884 361.46 711.633 386.066 711.633C410.655 711.633 433.591 704.894 450.339 688.132C450.35 688.121 450.361 688.11 450.372 688.098L540.208 601.262ZM355.533 438.667H693.7C714.033 438.667 731.033 456.281 731.033 478.533C731.033 500.785 714.033 518.4 693.7 518.4H355.533C335.169 518.4 318.2 500.788 318.2 478.533C318.2 456.279 335.169 438.667 355.533 438.667Z"
-									stroke="hsl(var(--text-color))"
-									strokeWidth="10"
-								/>
-							</g>
-						</svg>
-					</a>
-					<p className="text-center mt-4">LeetCode</p>
-				</div>
-				<div role="button">
-					<a
-						className="block size-12 md:size-16 mx-auto"
-						href="https://www.instagram.com/kalinga._"
-						target="_blank"
-						aria-label="Visit my Instagram"
-					>
-						<svg
-							className="group"
-							viewBox="0 0 800 800"
-							fill="none"
-							xmlns="http://www.w3.org/2000/svg"
-						>
-							<g>
-								<path
-									className="[stroke-dasharray:4082px] [stroke-dashoffset:4082px] animate-line-anim fill-transparent transition-[fill] group-hover:[animation-duration:0s] group-hover:fill-[hsl(var(--text-color))]"
-									d="M238.324 5H561.676C690.325 5 794.999 109.673 795 238.324V561.676C795 690.327 690.327 795 561.676 795H238.324C109.673 795 5 690.327 5 561.676V238.324C5 109.673 109.673 5 238.324 5ZM561.676 724.52C651.611 724.52 724.52 651.611 724.52 561.676V238.324C724.52 148.387 651.611 75.48 561.676 75.48H238.324C148.389 75.48 75.48 148.387 75.48 238.324V561.676C75.48 651.611 148.389 724.52 238.324 724.52H561.676Z"
-									stroke="hsl(var(--text-color))"
-									strokeWidth="10"
-								/>
-								<path
-									className="[stroke-dasharray:4082px] [stroke-dashoffset:4082px] animate-line-anim fill-transparent transition-[fill] group-hover:[animation-duration:0s] group-hover:fill-[hsl(var(--text-color))]"
-									d="M198.091 399.999C198.091 288.672 288.672 198.092 400 198.092C511.328 198.092 601.908 288.671 601.908 399.999C601.908 511.327 511.328 601.907 400 601.907C288.672 601.907 198.091 511.325 198.091 399.999ZM268.571 400C268.571 472.587 327.413 531.429 400 531.429C472.585 531.429 531.428 472.585 531.428 400C531.428 327.413 472.586 268.572 400 268.572C327.415 268.572 268.571 327.413 268.571 400Z"
-									stroke="hsl(var(--text-color))"
-									strokeWidth="10"
-								/>
-								<path
-									className="[stroke-dasharray:4082px] [stroke-dashoffset:4082px] animate-line-anim fill-transparent transition-[fill] group-hover:[animation-duration:0s] group-hover:fill-[hsl(var(--text-color))]"
-									d="M651.882 194.648C651.882 219.268 631.923 239.226 607.304 239.226C582.684 239.226 562.726 219.268 562.726 194.648C562.726 170.028 582.684 150.07 607.304 150.07C631.923 150.07 651.882 170.028 651.882 194.648Z"
-									stroke="hsl(var(--text-color))"
-									strokeWidth="10"
-								/>
-							</g>
-						</svg>
-					</a>
-					<p className="text-center mt-4">Instagram</p>
-				</div>
-				<div role="button">
-					<a
-						className="block size-12 md:size-16 mx-auto"
-						href="https://github.com/iamkcube"
-						target="_blank"
-						aria-label="Visit my Github"
-					>
-						<svg
-							className="group"
-							viewBox="0 0 728 710"
-							fill="none"
-							xmlns="http://www.w3.org/2000/svg"
-						>
-							<path
-								fillRule="evenodd"
-								clipRule="evenodd"
-								className="[stroke-dasharray:4163px] [stroke-dashoffset:4163px] animate-line-anim fill-transparent transition-[fill] group-hover:[animation-duration:0s] group-hover:fill-[hsl(var(--text-color))]"
-								d="M364 5.66667C278.883 5.62294 196.53 35.8796 131.687 91.0188C66.8437 146.158 23.7458 222.579 10.1105 306.597C-3.5249 390.615 13.1927 476.743 57.2696 549.559C101.347 622.375 169.904 677.123 250.667 704C268.667 707.333 275.167 696.333 275.167 687.333C275.167 678.333 275.167 656.333 275.167 626.5C175.167 648.167 154.5 578.5 154.5 578.5C147.886 556.457 133.494 537.565 114 525.333C81.5002 503.167 116.5 503.5 116.5 503.5C127.853 505.089 138.693 509.248 148.195 515.66C157.697 522.071 165.611 530.567 171.333 540.5C203.333 595.333 254.667 579.5 275.667 570.333C277.325 552.126 285.421 535.107 298.5 522.333C218.834 513.333 135.167 482.667 135.167 345.333C134.639 309.706 147.895 275.252 172.167 249.167C161.139 218.275 162.392 184.328 175.667 154.333C175.667 154.333 205.667 144.667 274.167 191C332.874 175 394.793 175 453.5 191C522 144.667 552 154.333 552 154.333C565.174 184.351 566.425 218.259 555.5 249.167C579.726 275.269 592.924 309.726 592.333 345.333C592.333 483 509 513.167 428.833 522.167C437.435 530.882 444.061 541.347 448.259 552.85C452.458 564.354 454.132 576.626 453.167 588.833C453.167 636.667 453.167 675.333 453.167 687.167C453.167 699 459.667 707.833 477.833 703.833C558.513 676.852 626.962 622.046 670.936 549.221C714.909 476.395 731.538 390.3 717.848 306.337C704.158 222.373 661.042 146.019 596.214 90.9333C531.385 35.8473 449.072 5.62286 364 5.66667Z"
-								stroke="hsl(var(--text-color))"
-								strokeWidth="10"
-								strokeLinecap="round"
-								strokeLinejoin="round"
-							/>
-						</svg>
-					</a>
-					<p className="text-center mt-4">Github</p>
-				</div>
+			<div className="grid 
+			grid-cols-[repeat(auto-fit,minmax(min(4.25rem,100%),1fr))] 
+			md:grid-cols-[repeat(auto-fit,minmax(min(4.75rem,100%),1fr))] 
+			place-items-center
+			flex-wrap 
+			mt-8 md:mt-12 gap-4 md:gap-x-16 md:gap-y-8">
+				{socials.map(({ name, link, icon }) => (
+					<SocialIcon
+						key={name}
+						name={name}
+						link={link}
+						icon={icon}
+					/>
+				))}
 			</div>
 		</section>
 	);
