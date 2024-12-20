@@ -1,8 +1,10 @@
 import type { Metadata } from "next";
 import localFont from "next/font/local";
 import "./globals.css";
+import "lenis/dist/lenis.css";
 import { AppRouterCacheProvider } from "@mui/material-nextjs/v14-appRouter";
 import { DarkModeProvider } from "@/contexts/DarkModeContext";
+import { ReactLenis } from "lenis/react";
 
 const voyager = localFont({
 	src: [
@@ -191,9 +193,13 @@ export default function RootLayout({
 				/>
 			</head>
 			<DarkModeProvider initialDarkMode={true}>
-				<body className={`${voyager.variable} antialiased`}>
-					<AppRouterCacheProvider>{children}</AppRouterCacheProvider>
-				</body>
+				<ReactLenis root>
+					<body className={`${voyager.variable} antialiased`}>
+						<AppRouterCacheProvider>
+							{children}
+						</AppRouterCacheProvider>
+					</body>
+				</ReactLenis>
 			</DarkModeProvider>
 		</html>
 	);

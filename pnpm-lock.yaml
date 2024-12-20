@@ -20,6 +20,9 @@ dependencies:
   '@mui/material-nextjs':
     specifier: ^6.1.6
     version: 6.1.6(@emotion/cache@11.13.1)(@emotion/react@11.13.3)(@types/react@18.3.12)(next@15.0.3)(react@19.0.0-rc-5c56b873-20241107)
+  lenis:
+    specifier: ^1.1.18
+    version: 1.1.18(react@19.0.0-rc-5c56b873-20241107)
   next:
     specifier: 15.0.3
     version: 15.0.3(react-dom@19.0.0-rc-5c56b873-20241107)(react@19.0.0-rc-5c56b873-20241107)
@@ -2519,6 +2522,20 @@ packages:
     dependencies:
       language-subtag-registry: 0.3.23
     dev: true
+
+  /lenis@1.1.18(react@19.0.0-rc-5c56b873-20241107):
+    resolution: {integrity: sha512-hBJVN0o7ZWt6DqyLoCkYKLffgCqywX0Gf/ZWhWC8Ths1zN/lZHoAMC3faFjaTxnOEKokeV0q1Mlyu1aUr18xFQ==}
+    peerDependencies:
+      react: '>=17.0.0'
+      vue: '>=3.0.0'
+    peerDependenciesMeta:
+      react:
+        optional: true
+      vue:
+        optional: true
+    dependencies:
+      react: 19.0.0-rc-5c56b873-20241107
+    dev: false
 
   /levn@0.4.1:
     resolution: {integrity: sha512-+bT2uH4E5LGE7h/n3evcS/sQlJXCpIp6ym8OWJ5eV6+67Dsql/LaaT7qJBAt2rzfoa/5QBGBhxDix1dMt2kQKQ==}

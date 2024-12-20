@@ -4,8 +4,7 @@
 
 @import url(reset.css);
 
-:root
-{
+:root {
 	--bg-color: 212, 15%, 90%;
 	--bg-color-dark: 240, 40%, 3%;
 	--text-color: 0, 0%, 8%;
@@ -25,82 +24,76 @@
 	}
 } */
 
-.light
-{
+.light {
 	--bg-color: 212, 15%, 90%;
 	--text-color: 0, 0%, 8%;
 }
 
-.dark
-{
+.dark {
 	--bg-color: 240, 40%, 3%;
 	--text-color: 212, 15%, 90%;
 }
 
-body
-{
+body {
 	background-color: hsl(var(--bg-color));
-	background-image: linear-gradient(to left, hsla(var(--bg-color), 0) 10%, hsla(var(--bg-color), 1)), url("/noise.webp");
+	background-image: linear-gradient(
+			to left,
+			hsla(var(--bg-color), 0) 10%,
+			hsla(var(--bg-color), 1)
+		),
+		url("/noise.webp");
 	/* filter: url("#noiseFilter"); */
 	color: hsl(var(--text-color));
-	transition: background-color var(--button-transition-time) var(--button-transition-function),
+	transition: background-color var(--button-transition-time)
+			var(--button-transition-function),
 		color var(--button-transition-time) var(--button-transition-function);
 	overflow-x: hidden;
 }
 
-svg>rect
-{
+svg > rect {
 	fill: hsl(var(--text-color));
-	transition: fill var(--button-transition-time) var(--button-transition-function);
+	transition: fill var(--button-transition-time)
+		var(--button-transition-function);
 }
 
-strong
-{
+strong {
 	color: var(--accent-color);
 }
 
-body
-{
+body {
 	scrollbar-gutter: stable;
 }
 
-::-webkit-scrollbar
-{
+::-webkit-scrollbar {
 	background: transparent;
 	width: 4px;
 	border-radius: 100vh;
 }
 
-:is(:not(body))::-webkit-scrollbar-thumb
-{
+:is(:not(body))::-webkit-scrollbar-thumb {
 	background: var(--accent-color);
 	border-radius: 100vh;
 }
 
-:is(:not(body))::-webkit-scrollbar-thumb:hover
-{
+:is(:not(body))::-webkit-scrollbar-thumb:hover {
 	background: color-mix(in lab, var(--accent-color), transparent 50%);
 	border-radius: 100vh;
 }
 
-body::-webkit-scrollbar-thumb
-{
+body::-webkit-scrollbar-thumb {
 	background: var(--accent-color);
 	border-radius: 100vh;
 }
 
-body::-webkit-scrollbar-thumb:hover
-{
+body::-webkit-scrollbar-thumb:hover {
 	background: color-mix(in lab, var(--accent-color), transparent 50%);
 	border-radius: 100vh;
 }
 
-::selection
-{
+::selection {
 	background-color: color-mix(in lab, var(--accent-color), transparent 60%);
 }
 
-body
-{
+body {
 	counter-reset: section-number;
 }

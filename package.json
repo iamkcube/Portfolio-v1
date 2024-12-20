@@ -14,6 +14,7 @@
     "@emotion/styled": "^11.13.0",
     "@mui/material": "^6.1.6",
     "@mui/material-nextjs": "^6.1.6",
+    "lenis": "^1.1.18",
     "next": "15.0.3",
     "react": "19.0.0-rc-5c56b873-20241107",
     "react-dom": "19.0.0-rc-5c56b873-20241107"
