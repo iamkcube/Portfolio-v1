@@ -5,6 +5,8 @@ import "lenis/dist/lenis.css";
 import { AppRouterCacheProvider } from "@mui/material-nextjs/v14-appRouter";
 import { DarkModeProvider } from "@/contexts/DarkModeContext";
 import { ReactLenis } from "lenis/react";
+import { Analytics } from '@vercel/analytics/next';
+import { SpeedInsights } from '@vercel/speed-insights/next';
 
 const voyager = localFont({
 	src: [
@@ -198,6 +200,8 @@ export default function RootLayout({
 						<AppRouterCacheProvider>
 							{children}
 						</AppRouterCacheProvider>
+						<SpeedInsights />
+						<Analytics />
 					</body>
 				</ReactLenis>
 			</DarkModeProvider>
