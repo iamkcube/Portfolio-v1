@@ -55,7 +55,9 @@ export default function Navbar() {
 			before:w-[calc(100%_+_2rem)] md:before:w-[calc(100%_+_8rem)] 
 			before:h-[calc(100%_+_2rem)] md:before:h-[calc(100%_+_4rem)]
 			before:-mt-2 before:-ml-4 md:before:-ml-16
-			before:bg-[linear-gradient(to_bottom,hsla(var(--bg-color),0.75)_60%,transparent)]"
+			before:backdrop-blur-lg
+			before:[mask:linear-gradient(to_bottom,black_60%,transparent)]
+			before:bg-[linear-gradient(to_bottom,hsla(var(--bg-color),0.25)_30%,transparent)]"
 		>
 			<div className="logo font-bold md:font-normal text-base md:text-2xl z-50">
 				Kalinga
